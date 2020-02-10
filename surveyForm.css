@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+:root{
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-darkblue);
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--color-darkblue);
+    z-index: -1;
+    background-image: linear-gradient(115deg,
+    rgba(58, 58, 158, 0.8),
+    rgba(136, 136, 206, 0.7)
+  ),
+  url(https://raw.githubusercontent.com/lasjorg/fcc-form-example-image/master/67103817-7c51e200-f18b-11e9-975f-f74561336a9a-lj.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+}
+h1{
+    font-weight: 600;
+    line-height: 1.4;
+}
+p{
+    font-size: 1.125rem;
+}
+
+h1,p{
+    margin-top: 0;
+    margin-bottom: 0.5rem; 
+}
+label{
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+input,button,textarea,select{
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+     
+    }
+button{
+    border: none;
+
+}
+.container{
+    color: var(--color-white);
+    margin: 1.315rem auto 0 auto;
+    width: 100%;
+    
+    
+    
+}
+@media(max-width: 578px){
+    .container{
+        width: 550px;
+    }
+}
+@media(max-width: 770px){
+    .container{
+        width: 740px;
+    }
+}
+#header{
+    margin-bottom: 1.175rem;
+    padding: 0 0.625rem;
+}
+#description{
+    font-style: italic;
+    font-weight: 300;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+form{
+    background-color: var(--color-darkblue-alpha);
+    max-width: 700px;
+    align-items: center;
+    margin: 10px auto 10px auto ;
+    padding: 30px;
+    border-radius: 10px;
+}
+.clue{
+    font-size: 0.9rem;
+    margin-left: 0.25;
+    color: #e4e4e4;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 4px;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color 0.15s ease-in-out box-shadow 0.15s ease-in-out;
+}
+.form-control :focus{
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.input-radio,
+.input-checkbox{
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-width: 1.25rem;
+    min-height: 1.25rem;
+
+}
+.input-textarea{
+    height: 120px;
+}
+#submit{
+  background-color: var(--color-green);
+  color: #f3f3f3
+}
